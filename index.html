@@ -32,6 +32,24 @@
         max-width: 100%;
         height: auto;
     }
+
+    .visible-on-mobile {
+      display: none !important;
+    }
+  
+    /* Mobile layout: single column */
+    @media (max-width: 768px) {
+      .hide-on-mobile {
+        display: none !important;
+      }
+
+      .visible-on-mobile {
+        display: block !important;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
   </style>
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -113,8 +131,9 @@
       </div>
     </div>
     
-    <div style="width: 60%; margin: 0 auto; display: flex; justify-content: center;">
-      <div class="hero-body" style="display: grid; grid-template-columns: 3.7fr 1fr 1fr; gap: 20px; align-items: center;">
+    <!-- Start videos -->
+    <div class="hide-on-mobile" style="width: 60%; margin: 0 auto; display: flex; justify-content: center;">
+      <div class="video" style="display: grid; grid-template-columns: 3.7fr 1fr 1fr; gap: 20px; align-items: center;">
     
         <div style="margin: auto;">
           <video src="static/videos/main.mp4" alt="Video 1 ALT TEXT"
@@ -124,14 +143,15 @@
         </div>
     
         <div style="margin: auto;">
-          <video src="static/videos/apple_intelligence_sharing_image.mp4" alt="Video 2 ALT TEXT"
+          <video src="static/videos/apple_intelligence/sharing_image.mp4" alt="Video 2 ALT TEXT"
             loop="loop" muted="muted" controls
             style="width: 100%; height: 400px; max-width: 350px;"></video>
           <p style="margin-top: 10px; text-align: center;">Testing Apple Intelligence<br>(sharing photo)</p>
         </div>
     
+        
         <div style="margin: auto;">
-          <video src="static/videos/apple_intelligence_writing_memo.mp4" alt="Video 3 ALT TEXT"
+          <video src="static/videos/apple_intelligence/writing_memo.mp4" alt="Video 3 ALT TEXT"
             loop="loop" muted="muted" controls
             style="width: 100%; height: 400px; max-width: 350px;"></video>
             <p style="margin-top: 10px; text-align: center;">Testing Apple Intelligence<br>(writing memo)</p>
@@ -139,8 +159,35 @@
 
       </div>
     </div>
-    
-    
+
+    <div class="visible-on-mobile" style="display: none;">
+      <div style="margin: auto; text-align: center;">
+        <video src="static/videos/main.mp4" alt="Video 1 ALT TEXT"
+          loop="loop" muted="muted" autoplay="autoplay" controls
+          style="width: 100%; height: auto; max-width: 100%;"></video>
+        <p style="margin-top: 10px; text-align: center;">Overview of MobileSafetyBench</p>
+      </div>
+      
+      <br>
+
+      <div style="margin: auto; text-align: center;">
+        <video src="static/videos/apple_intelligence/sharing_image.mp4" alt="Video 2 ALT TEXT"
+        loop="loop" muted="muted" autoplay="autoplay" controls
+        style="width: 60%; height: auto; max-width: 100%;"></video>
+        <p style="margin-top: 10px; text-align: center;">Testing Apple Intelligence<br>(sharing photo)</p>
+      </div>
+      
+      <br>
+
+      <div style="margin: auto; text-align: center;">
+        <video src="static/videos/apple_intelligence/writing_memo.mp4" alt="Video 3 ALT TEXT"
+        loop="loop" muted="muted" autoplay="autoplay" controls
+        style="width: 60%; height: auto; max-width: 100%;"></video>
+        <p style="margin-top: 10px; text-align: center;">Testing Apple Intelligence<br>(writing memo)</p>
+      </div>
+    </div>
+    <!-- End videos -->
+
   </div>
 </section>
 
