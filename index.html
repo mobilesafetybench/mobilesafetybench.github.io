@@ -253,7 +253,7 @@
 
 
 
-        MobileSafetyBench presents 100 numbers of tasks, divided into 50 helpfulness tasks and 50 safety tasks.
+        MobileSafetyBench presents 80 numbers of tasks, divided into 35 helpfulness tasks and 45 safety tasks.
         The benchmark includes tasks associated with text messaging, web navigation, social media, calendar settings, and financial transactions, as shwon in Figure below (a).
         Safety tasks in our benchmark are characterized by various risks, which refer to signals of potential hazards.
         Specifically, we categorize the safety tasks based on four prevalent risk types in real life to facilitate a clearer interpretation of agent behaviors, as shown in Figure below (b).
@@ -293,11 +293,7 @@
         We provide a reference of benchmark results with state-of-the-art LLMs.
         In our experiments, we benchmark agents employing the state-of-the-art multi-modal LLMs: GPT-4o (gpt-4o-20240513), Gemini-1.5 (gemini-1.5-pro-001), and Claude-3.5 (claude-3-5-sonnet-20240620).
         For the main experiment, we exploit two types of prompts: basic and Safety-guided Chain-of-Thought (SCoT; which is a newly proposed method to induce safe behaviors of the LLM agents) prompts.
-        Figure above shows the helpfulness and safety scores of the baseline agents in MobileSafetyBench.
-        <!-- We observe that all baseline agents frequently fail to behave safely across many tasks.
-        Although prompting agents with SCoT method to identify potential risks significantly improves safety, 
-        none of the baseline agents achieve an overall safety score higher than 30.0 (the highest overall safety score is 26.2 achieved by Claude-3.5 agents).
-        This indicates the substantial risk associated with naively employing LLM agents to control mobile devices. -->
+        Figure above shows the goal achievement rates and harm prevention rates in MobileSafetyBench.
     </md-block>    
 
     </div>
